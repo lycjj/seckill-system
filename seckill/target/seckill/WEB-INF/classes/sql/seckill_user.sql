@@ -1,0 +1,11 @@
+CREATE TABLE seckill_user(
+id BIGINT(20) NOT NULL COMMENT '用户id,手机号码',
+nickname VARCHAR (255) NOT NULL COMMENT '用户昵称',
+password VARCHAR (32) DEFAULT NULL  COMMENT '用户密码',
+salt VARCHAR (10) DEFAULT NULL COMMENT '盐',
+head VARCHAR (128) DEFAULT NULL COMMENT '云存储的ID',
+register_date DATETIME DEFAULT NULL COMMENT '注册时间',
+last_login_date DATETIME DEFAULT NULL COMMENT '上次登录时间',
+login_count int(11) DEFAULT 0 COMMENT '登录次数',
+PRIMARY KEY(id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
